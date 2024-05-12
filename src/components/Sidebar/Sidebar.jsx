@@ -14,13 +14,17 @@ const Sidebar = () => {
           <img src={assets.plus_icon} />
           {extended?<p>New Chat</p>:null}
         </div>
-        <div className='recent'>
-          <p className='recent-title'>Recent</p>
-          <div className='recent-entry'>
-            <img src={assets.message_icon}/>
-            <p>What is react...</p>
-          </div>
+        {extended
+        ?<div className='recent'>
+        <p className='recent-title'>Recent</p>
+        <div className='recent-entry'>
+          <img src={assets.message_icon}/>
+          <p>What is react...</p>
         </div>
+      </div>
+      :null
+      }
+        
       </div>
       <div className='bottom'>
         <div className='bottom-item recent-entry'>
